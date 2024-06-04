@@ -4,6 +4,9 @@ import Link from 'next/link'
 import React from 'react'
 import useCart from './(store)/store'
 import Modal from './Modal'
+import Image from 'next/image'
+import logo from '../public/logo.png'
+
 
 export default function Header() {
     const cartItems = useCart(state => state.cart)
@@ -18,6 +21,9 @@ export default function Header() {
             <Modal />
         )}
         <div className="flex items-center justify-between">
+          <div className="">
+            <Image src={logo} alt="logo" className='w-20 h-20'/>
+          </div>
           <Link href={'/'}>
           <h1 className="uppercase cursor-pointer text-white hover:scale-110">NEXUS</h1>
           </Link>
