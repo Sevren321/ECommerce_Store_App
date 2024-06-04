@@ -27,8 +27,8 @@ export default async function Home() {
   return (
     //in console can see our products are an array map out our product cards
     //map over products array get the product and index
-    <main className="p-4 flex flex-col">
-      <div className="max-w-[1000px] w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+    <main className="p-4 flex bg-slate-700 flex-col">
+      <div className="max-w-[1000px]  w-full mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
         {/* swap grid css for flex to define max width on the element so cards center and do not continue to get larger */}
         {products.map((product, productIndex) => {
           return (

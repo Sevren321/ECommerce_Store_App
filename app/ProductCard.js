@@ -37,7 +37,7 @@ export default function ProductCard(props) {
     <div
       // assign onClick to card to route to product folder pagejs file page
       onClick={onProductClick}
-      className="flex flex-col shadow bg-white hove:shadow-lg cursor-pointer"
+      className="flex flex-col shadow bg-red-700 hove:shadow-lg  cursor-pointer"
     >
       {/* aquire image through productInfo images and index first is 0 */}
       <img
@@ -45,7 +45,7 @@ export default function ProductCard(props) {
         alt={name}
         className="w-full h-full object-cover"
       />
-      <div className="flex flex-col gap-2 p-4">
+      <div className="flex flex-col gap-2 p-4 text-white">
         <div className="flex items-center justify-between">
           <h3>{name}</h3>
           <p>${cost / 100}</p>

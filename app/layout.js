@@ -23,9 +23,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body
-        className={"min-h-screen flex flex-col relative " + inter.className}
+        className={"min-h-screen flex flex-col relative bg-slate-900 " + inter.className}
       >
         <Header />
+        
         <div className="flex-1">{children}</div>
         <footer className="flex items-center flex-wrap justify-center border-t border-solid border-slate-300 p-4 md:p-8">
           <Link href={'https://x.com/Sev_Ren'} target='_blank'>

@@ -12,14 +12,16 @@ export default function Header() {
     const setOpenModal = useCart(state => state.setOpenModal)
     console.log(cartItems)
   return (
-    <header className="sticky top-0 p-6 bg-white border-b border-solid border-blue-900 shadow-md z-50 text-2xl sm:text-3xl md:text-4xl sm:p-8 flex items-center justify-between">
+    <header className="sticky top-0 p-6 bg-slate-900 border-b border-solid border-blue-900 shadow-md z-50 text-2xl sm:text-3xl md:text-4xl sm:p-8 ">
         {/* render out model */}
         {openModal && (
             <Modal />
         )}
+        <div className="flex items-center justify-between">
           <Link href={'/'}>
-          <h1 className="uppercase cursor-pointer hover:scale-110">Fruit Shop</h1>
+          <h1 className="uppercase cursor-pointer text-white hover:scale-110">NEXUS</h1>
           </Link>
+          
           {/* group means listen to parent hover state */}
           <div onClick={setOpenModal} className="relative cursor-pointer grid group place-items-center">
             {/* conditional logic if greater than 0 render out value*/}
@@ -28,8 +30,10 @@ export default function Header() {
                     <p className='text-xs sm:text-sm'>{cartItems.length}</p>
                 </div>
             )}
-          <i class="fa-solid cursor-pointer group-hover:text-slate-500 fa-cart-shopping"></i>
+          <i class="fa-solid cursor-pointer text-red-700 group-hover:text-slate-500 fa-cart-shopping"></i>
           </div>
+          </div>
+          <div className="bg-green-900 h-10 w-full rounded mt-10 mb-[-31px] text-lg p-2">Home</div>
         </header>
   )
 }

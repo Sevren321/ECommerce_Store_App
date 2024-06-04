@@ -34,7 +34,7 @@ function handleAddToCart() {
 
 
   return (
-  <div className="flex flex-col p-4">
+  <div className="flex flex-col p-4 text-red-700">
     <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-[1000px] mx-auto">
       <div className="md:p-2 md:shadow">
       <img  src={productInfo.images[0]} alt={name} className="w-full h-full object-cover" />
